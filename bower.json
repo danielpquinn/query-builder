@@ -1,0 +1,16 @@
+{
+  "name": "vx-query-builder",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.2",
+    "chosen.jquery": "https://github.com/harvesthq/chosen/releases/download/1.0.0/chosen_v1.0.0.zip"
+  }
+}

@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'openSansRegular';
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#openSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'openSansSemiBold';
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#openSansSemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #544842;
+  color: #333333;
+  font-family: 'openSansRegular';
+  padding-top: 80px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'openSansRegular';
+  font-weight: normal;
+}
+
+.container-inverted {
+  color: #d1d1d1;
+}
+
+.btn-remove {
+  color: #D1D1D1;
+}
+.btn-remove:hover {
+  color: #57c1db;
+}
+
+.navbar-branded {
+  background: #e64225;
+}
+.navbar-branded a {
+  color: white;
+}
+.navbar-branded .nav .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+.navbar-branded .nav > li > a {
+  color: white;
+}
+.navbar-branded .nav > li > a:hover,
+.navbar-branded .nav > li > a:focus {
+  background-color: #EB604C;
+}
+.navbar-branded .nav > li > a:hover .caret,
+.navbar-branded .nav > li > a:focus .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+.navbar-branded .nav .open > a {
+  background-color: #EB604C;
+}
+.navbar-branded .nav .open > a .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+
+.query-navigation {
+  background-color: white;
+}
+
+.query-navigation {
+  padding: 0;
+}
+.query-navigation > nav > h3 {
+  font-size: 14px;
+  margin: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: 'openSansSemiBold';
+  border-bottom: 1px solid #E7E7E7;
+}
+.query-navigation > nav > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.query-navigation > nav > ul li {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.query-navigation > nav > ul li > a:first-child {
+  font-size: 16px;
+  color: #B3B3B3;
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.query-navigation > nav > ul li.active > a:first-child {
+  text-decoration: none;
+  background-color: #57c1db;
+  border-bottom: 1px solid #57c1db;
+  color: white;
+}
+.query-navigation > nav > ul li.active .glyphicon-remove {
+  color: white;
+}
+.query-navigation > nav > ul li .glyphicon-remove {
+  position: absolute;
+  right: 18px;
+  top: 26px;
+}
+
+.query-editor {
+  background-color: #f2f2eb;
+  padding: 0 30px;
+}
+.query-editor > h2 {
+  color: #57c1db;
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+.query-editor > h2 .glyphicon {
+  font-size: 0.75em;
+  color: #57c1db;
+}
+.query-editor .and-container {
+  position: relative;
+  overflow: hidden;
+}
+.query-editor .and-container:not(:last-child)::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 7%;
+  bottom: 0;
+  width: 4px;
+  background: #57c1db;
+}
+.query-editor .and,
+.query-editor .or {
+  width: 100%;
+  min-height: 53px;
+  position: relative;
+}
+.query-editor .and .title,
+.query-editor .or .title {
+  width: 15%;
+  background: white;
+  border: 1px solid #E7E7E7;
+  display: block;
+  float: left;
+  padding: 18px;
+  border-right: 1px solid #E7E7E7;
+}
+.query-editor .and .title > h3,
+.query-editor .or .title > h3 {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'openSansSemiBold';
+  font-size: 14px;
+}
+.query-editor .and .parameters,
+.query-editor .or .parameters {
+  position: relative;
+  width: 85%;
+  background: white;
+  border-top: 1px solid #E7E7E7;
+  border-right: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  float: left;
+  padding: 0 10px;
+}
+.query-editor .and .parameters .form-control,
+.query-editor .or .parameters .form-control {
+  display: block;
+  float: left;
+  width: auto;
+  margin-top: 9px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.query-editor .and .parameters .btn-remove,
+.query-editor .or .parameters .btn-remove {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+}
+.query-editor .or {
+  margin-left: 15%;
+  margin-top: 4px;
+}
+.query-editor .or .parameters {
+  width: 70%;
+}
+.query-editor .or::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 7%;
+  width: 4px;
+  height: 4px;
+  background: #57c1db;
+}
+.query-editor .or:last-child {
+  margin-bottom: 10px;
+}
+.query-editor .btn-add-or {
+  margin: 4px 0 10px 0;
+  float: right;
+}
