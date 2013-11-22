@@ -1,12 +1,9 @@
 <html>
 <head>
   <title>Query Builder</title>
-  <script type="text/javascript" src="vendor/chosen.jquery/chosen.jquery.js"></script>
   <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
   <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="vendor/chosen.jquery/chosen.css">
-  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/screen.css">
+  <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
 
@@ -42,10 +39,14 @@
 
   <header class="page-header-branded">
     <div class="container container-inverted">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Rainier</h2>
+      <div class="row">
+        <div class="col-lg-10">
+          <h2>Mt. Rainier <a href="#"><span class="glyphicon glyphicon-edit"></span></a></h2>
+        </div>
+        <div class="col-lg-2">
+          <div class="btn-group query-builder-navigation">
+            <button type="button" class="btn btn-default btn-selected">Queries</button>
+            <button type="button" class="btn btn-default">Results</button>
           </div>
         </div>
       </div>
@@ -64,6 +65,7 @@
                     <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a></li>
               <li><a href="#">Facebook</a> <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a></li>
             </ul>
+            <button type="button" class="btn btn-default btn-add-query"><span class="glyphicon glyphicon-plus"></span> Query</button>
           </nav>
         </div>
 
@@ -81,14 +83,14 @@
                   </div>
                   <div class="parameters">
                     <select name="data-source-1" id="data-source-1" class="form-control">
-                      <option value="socialNetwork">Social Network</option>
-                      <option value="newsWebsite">News Website</option>
-                      <option value="publicDatabase">Public Database</option>
+                      <option value="Social Network">Social Network</option>
+                      <option value="News Website">News Website</option>
+                      <option value="Public Database">Public Database</option>
                     </select>
                     <select name="social-network-1" id="data-source-1" class="form-control">
                       <option value="facebook">Facebook</option>
-                      <option value="twitter" selected="selected">Twitter</option>
-                      <option value="Reddit">Reddit</option>
+                      <option value="twitter">Twitter</option>
+                      <option value="Reddit" selected="selected">Reddit</option>
                     </select>
                     <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a>
                   </div>
@@ -100,9 +102,9 @@
                   </div>
                   <div class="parameters">
                     <select name="data-source-1" id="data-source-1" class="form-control">
-                      <option value="socialNetwork">Social Network</option>
-                      <option value="newsWebsite">News Website</option>
-                      <option value="publicDatabase">Public Database</option>
+                      <option value="Social Network">Social Network</option>
+                      <option value="News Website">News Website</option>
+                      <option value="Public Database">Public Database</option>
                     </select>
                     <select name="social-network-1" id="data-source-1" class="form-control">
                       <option value="facebook">Facebook</option>
@@ -125,16 +127,13 @@
                     <h3>And</h3>
                   </div>
                   <div class="parameters">
-                    <select name="data-source-1" id="param-1" class="form-control">
-                      <option value="document-contains">Social Network</option>
-                      <option value="newsWebsite">News Website</option>
-                      <option value="publicDatabase">Public Database</option>
+                    <select name="document-1" id="param-1" class="form-control">
+                      <option value="Document Contains">Document Contains</option>
+                      <option value="Title Contains">Title Contains</option>
+                      <option value="Body Contains">Body contains</option>
+                      <option value="Includes Tag">Includes Tag</option>
                     </select>
-                    <select name="social-network-1" id="data-source-1" class="form-control">
-                      <option value="facebook">Facebook</option>
-                      <option value="twitter" selected="selected">Twitter</option>
-                      <option value="Reddit">Reddit</option>
-                    </select>
+                    <input class="form-control" type="text" placeholder="Cats, Dogs, Lions" value="Rainier"/>
                     <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a>
                   </div>
                 </div><!-- /.and -->
@@ -147,19 +146,16 @@
 
                 <div class="and form-group">
                   <div class="title">
-                    <h3>Source</h3>
+                    <h3>And</h3>
                   </div>
                   <div class="parameters">
-                    <select name="data-source-1" id="data-source-1" class="form-control">
-                      <option value="socialNetwork">Social Network</option>
-                      <option value="newsWebsite">News Website</option>
-                      <option value="publicDatabase">Public Database</option>
+                    <select name="document-1" id="param-1" class="form-control">
+                      <option value="Document Contains">Document Contains</option>
+                      <option value="Title Contains">Title Contains</option>
+                      <option value="Body Contains">Body contains</option>
+                      <option value="Includes Tag">Includes Tag</option>
                     </select>
-                    <select name="social-network-1" id="data-source-1" class="form-control">
-                      <option value="facebook">Facebook</option>
-                      <option value="twitter" selected="selected">Twitter</option>
-                      <option value="Reddit">Reddit</option>
-                    </select>
+                    <input class="form-control" type="text" placeholder="Cats, Dogs, Lions" value="Flowers"/>
                     <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a>
                   </div>
                 </div><!-- /.and -->
@@ -169,16 +165,29 @@
                     <h3>Or</h3>
                   </div>
                   <div class="parameters">
-                    <select name="data-source-1" id="data-source-1" class="form-control">
-                      <option value="socialNetwork">Social Network</option>
-                      <option value="newsWebsite">News Website</option>
-                      <option value="publicDatabase">Public Database</option>
+                    <select name="document-1" id="param-1" class="form-control">
+                      <option value="Document Contains">Document Contains</option>
+                      <option value="Title Contains">Title Contains</option>
+                      <option value="Body Contains">Body contains</option>
+                      <option value="Includes Tag">Includes Tag</option>
                     </select>
-                    <select name="social-network-1" id="data-source-1" class="form-control">
-                      <option value="facebook">Facebook</option>
-                      <option value="twitter" selected="selected">Twitter</option>
-                      <option value="Reddit">Reddit</option>
+                    <input class="form-control" type="text" placeholder="Cats, Dogs, Lions" value="Wildlife"/>
+                    <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a>
+                  </div>
+                </div><!-- /.or -->
+
+                <div class="or form-group">
+                  <div class="title">
+                    <h3>Or</h3>
+                  </div>
+                  <div class="parameters">
+                    <select name="document-1" id="param-1" class="form-control">
+                      <option value="Document Contains">Document Contains</option>
+                      <option value="Title Contains">Title Contains</option>
+                      <option value="Body Contains">Body contains</option>
+                      <option value="Includes Tag">Includes Tag</option>
                     </select>
+                    <input class="form-control" type="text" placeholder="Cats, Dogs, Lions" value="Animal"/>
                     <a href="#" class="btn-remove"><span class="glyphicon glyphicon-remove"></span></a>
                   </div>
                 </div><!-- /.or -->
@@ -187,8 +196,10 @@
 
               </div><!-- /.and-container -->
 
+              <button type="button" class="btn btn-default btn-add-and"><span class="glyphicon glyphicon-plus"></span> And</button>
 
             </form>
+
           </div>
         </div>
       </div>
