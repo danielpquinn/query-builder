@@ -1,6 +1,17 @@
 module.exports = function (grunt) {
 
   grunt.initConfig({
+    requirejs: {
+      compile: {
+        options: {
+          almond: true,
+          baseUrl: 'static/js',
+          mainConfigFile: 'static/js/node-map.js',
+          name: 'node-map.js',
+          out: 'static/js/built.js'
+        }
+      }
+    },
     sass: {
       dist: {
         options: {
@@ -34,10 +45,11 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('build', ['requirejs']);
 
 };
