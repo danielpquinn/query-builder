@@ -37,6 +37,17 @@ h1, h2, h3, h4 {
   color: #57c1db;
 }
 
+.link {
+  fill: none;
+  stroke: #57C1DB;
+  stroke-width: 1.5px;
+}
+
+g text {
+  font-size: 10px;
+  font-family: "openSansSemiBold";
+}
+
 .page-header-branded {
   padding-top: 20px;
 }
@@ -125,6 +136,11 @@ h1, h2, h3, h4 {
   left: 0;
   background-color: white;
   z-index: 1;
+}
+.query-navigation > .form-group {
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
 }
 .query-navigation > nav {
   position: relative;

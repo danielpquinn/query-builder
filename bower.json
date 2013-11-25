@@ -10,6 +10,11 @@
   ],
   "dependencies": {
     "jquery": "~2.0.3",
-    "bootstrap": "~3.0.2"
+    "bootstrap": "~3.0.2",
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2",
+    "requirejs": "~2.1.9",
+    "Backbone-relational": "https://github.com/PaulUithol/Backbone-relational.git#~0.8.6",
+    "d3": "~3.3.10"
   }
 }
