@@ -1,5 +1,6 @@
 require.config({
   paths: {
+    'bootstrap': '../vendor/bootstrap/dist/js/bootstrap',
     'jquery': '../vendor/jquery/jquery',
     'underscore': '../vendor/underscore/underscore',
     'backbone': '../vendor/backbone/backbone',
@@ -28,7 +29,8 @@ require([
   'underscore',
   'backbone',
   'd3',
-  'backbone-relational'
+  'backbone-relational',
+  'bootstrap'
 ], function ($, _, Backbone, d3) {
 
   var models = {};
